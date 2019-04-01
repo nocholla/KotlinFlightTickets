@@ -3,7 +3,7 @@ package com.nocholla.kotlin.flight.tickets.network.model
 import com.google.gson.annotations.SerializedName
 
 
-abstract class Ticket {
+class Ticket {
     var from: String? = null
         internal set
     var to: String? = null
@@ -26,7 +26,7 @@ abstract class Ticket {
     var airline: Airline? = null
         internal set
 
-    abstract var price: Price
+    var price: Price? = null
 
     override fun equals(obj: Any?): Boolean {
         if (obj === this) {
